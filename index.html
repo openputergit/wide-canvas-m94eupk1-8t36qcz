@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Art by Ashiti</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF5F7;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        .hello-kitty-accent {
+            color: #FF69B4;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(255, 105, 180, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-semibold hello-kitty-accent">Nail Art by Ashiti</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-pink-400 transition">Home</a>
+                    <a href="#portfolio" class="hover:text-pink-400 transition">Portfolio</a>
+                    <a href="#services" class="hover:text-pink-400 transition">Services</a>
+                    <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#home" class="block hover:text-pink-400">Home</a>
+                <a href="#portfolio" class="block hover:text-pink-400">Portfolio</a>
+                <a href="#services" class="block hover:text-pink-400">Services</a>
+                <a href="#contact" class="block hover:text-pink-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 hello-kitty-accent">Transform Your Nails Into Art</h2>
+                <p class="text-gray-600 mb-6">Professional nail artist specializing in custom designs, elegant patterns, and creative expressions.</p>
+                <a href="#contact" class="bg-pink-400 text-white px-8 py-3 rounded-full hover:bg-pink-500 transition">Book Appointment</a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371" alt="Nail Art Preview" class="rounded-lg shadow-xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section id="portfolio" class="py-12 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 hello-kitty-accent">My Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-img rounded-lg overflow-hidden custom-shadow">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53" alt="Nail Design 1" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img rounded-lg overflow-hidden custom-shadow">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66" alt="Nail Design 2" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-img rounded-lg overflow-hidden custom-shadow">
+                    <img src="https://images.unsplash.com/photo-1604656314066-8338c3b40994" alt="Nail Design 3" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-12 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 hello-kitty-accent">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg custom-shadow">
+                    <i class="bi bi-gem text-3xl hello-kitty-accent"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Basic Manicure</h3>
+                    <p class="text-gray-600">Starting from $30</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg custom-shadow">
+                    <i class="bi bi-stars text-3xl hello-kitty-accent"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Gel Extensions</h3>
+                    <p class="text-gray-600">Starting from $50</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg custom-shadow">
+                    <i class="bi bi-palette text-3xl hello-kitty-accent"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Custom Art</h3>
+                    <p class="text-gray-600">Starting from $45</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-12 px-4 bg-white">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl font-semibold text-center mb-8 hello-kitty-accent">Book an Appointment</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-pink-400" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-pink-400" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Service</label>
+                    <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-pink-400" required>
+                        <option>Basic Manicure</option>
+                        <option>Gel Extensions</option>
+                        <option>Custom Art</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Message</label>
+                    <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-pink-400 h-32" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-pink-400 text-white py-3 rounded-lg hover:bg-pink-500 transition">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600">© 2024 Nail Art by Ashiti. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-600 hover:text-pink-400"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-gray-600 hover:text-pink-400"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-gray-600 hover:text-pink-400"><i class="bi bi-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
